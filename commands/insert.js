@@ -29,14 +29,12 @@ module.exports = {
         [GUILD_ID],
         function (error, results, fields) {
             if (error) throw error;
-            console.log(results);
             if (results.length < 1) {
                 con.con.query('INSERT INTO Bot (ServerID, Channel, ModRol, MemberRol) VALUES (?, ?, ?, ?)',
                 [GUILD_ID, welcomeChannel.id, modRol.id, memberRol.id],
                 function (error,results, fields) {if (error) throw error;})
                 interaction.reply({content: "Information succesfully send to Database."});
             } else if (results.length >= 1) {
-                console.log("niet zo lol");
                 interaction.reply({content: "Information is already known in the Database."});
             }
         })

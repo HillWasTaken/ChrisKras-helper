@@ -11,7 +11,6 @@ module.exports = {
             [member.guild.id],
             function (error, results, field) {
                 if (error) throw error;
-                console.log(member);
 
                 const embed = new EmbedBuilder()
                     .setColor(0xB300FA)

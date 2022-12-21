@@ -81,7 +81,6 @@ module.exports = {
                     .setImage(`${avatar.text}`)
                     .setTimestamp();
 
-                console.log(upTime);
                 
                 interaction.editReply({
                     embeds: [embed]

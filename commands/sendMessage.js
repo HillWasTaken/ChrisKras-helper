@@ -36,7 +36,6 @@ module.exports = {
             const channel = interaction.guild.channels.cache.get(interaction.channelId);
             channel.send(message);
         }
-        console.log(ifEmbed);
         // console.log(interaction);
         // const channelID = interaction.options.getChannel('channel');
         // const channelSend = client.channels.cache.get(channelID.id);
